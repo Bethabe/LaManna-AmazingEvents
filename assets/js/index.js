@@ -1,4 +1,5 @@
 
+{
 let fragmento = document.createDocumentFragment();
 for(let elemento of data.events){
 div = document.createElement("div");
@@ -18,3 +19,26 @@ fragmento.appendChild(div);
 }
 let contenedorTarjetas = document.getElementById("tarjetas-inicio");
 contenedorTarjetas.appendChild(fragmento);
+}
+
+{
+let fragmento = document.createDocumentFragment();
+let contenedor = document.getElementById("contenedor-categorias");
+let categoriasRepetidas = [];
+let categoriasSinRepetir = []
+for(let elemento of data.events){
+    categoriasRepetidas.push(elemento.category);
+}
+console.log(categoriasRepetidas);
+categoriasSinRepetir = categoriasRepetidas.filter((item,index)=>{
+    return categoriasRepetidas.indexOf(item) === index;
+})
+console.log(categoriasSinRepetir);
+
+for(let elemento of categoriasSinRepetir){
+    div = document.createElement("div");
+    div.innerHTML=`<label><input class="me-1" type="checkbox" name=""categoria" id=${elemento}>${elemento}</label>`
+    fragmento.appendChild(div);
+}
+contenedor.appendChild(fragmento);
+}
