@@ -38,7 +38,8 @@ console.log(categoriasSinRepetir);
 for(let elemento of categoriasSinRepetir){
     div = document.createElement("div");
     div.innerHTML=`<label><input class="me-1" type="checkbox" name=""categoria" id=${elemento}>${elemento}</label>`
-    fragmento.appendChild(div);
+    fragmento.appendChild(div); 
+    // frg
 }
 contenedor.appendChild(fragmento);
 }
