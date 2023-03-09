@@ -65,7 +65,7 @@ justify-content: center;
     color: #682686;
 }
 #contenedor-carrusel{
-    background-image: url("../img/My\ project-1.png");
+    background-image: url("../img/MyProject-1.png");
     background-size: contain;
     background-repeat: repeat;
     /* background: rgb(221, 100, 20 );
@@ -87,7 +87,7 @@ cursor: pointer;
     display: block;
     padding: 5px;
   } */
-  
+
 .navbar-nav a::before {
     content: '';
     position: absolute;
@@ -101,8 +101,8 @@ cursor: pointer;
     transform-origin: left;
     transition: transform 0.5s ease-in-out;
   }
-  
-  .navbar-nav a:hover::before {
+
+.navbar-nav a:hover::before {
     transform: scaleX(1);
   }
 #contenedor-tabla-estadisticas
@@ -117,16 +117,66 @@ background-color: rgba(177, 34, 77, 0.842);
     #titulo-panel{
         width: 100%;
     }
-.form-busqueda input, 
+.form-busqueda input,
  .form-busqueda button{
     height: 100%;
  }
 }
 
-  @media (min-width: 0px) and (max-width: 1199.98px) { 
-  
-.formulario-categorias{
-width: 30%;
+@media (min-width: 0px) and (max-width: 750px) {
+    .cuerpo-home{
+        flex-direction: column-reverse;
+        align-content: center;
+        gap: 20px;
+        width: 100%;
+    }
+    .contenedor-categ-busqueda{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    #tarjetas-inicio{
+        border: #682686 solid 2px;
+    }
+.formulario-categorias fieldset{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+}
+.formulario-categorias, .form-busqueda{
+width: 100%;
+
+}
+}
+@media (min-width : 460px){
+    .form-busqueda{
+        width: 50%;
+    }
+    #buscador{
+        width: 50%;
+    }
+}
+
+@media (min-width: 751px){
+    .cuerpo-home{
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    
+    .formulario-busqueda{
+        height: 50%;
+        width: 70%;
+    }
+    #buscador{
+        width: 50%;
+    }
+            
+    #btn-buscador{
+        width: 30%;
+    }
+    
 }
 /* #contenedor-carrusel{
     flex-direction: column;
@@ -143,18 +193,18 @@ width: 30%;
     height: 100%;
     align-self: center;
 } */
-#enlaces-navegacion{
+/* #enlaces-navegacion{
     font-size: 150px;
 }
 
-   }
-   
+   } */
+
    @media (min-width: 0px) and (max-width: 600px){
     .contenedor-pie-iconos{
 gap: 5px;
 
     }
-    
+
    }
 @media (min-width:0px) and (max-width: 768px){
     .contenedor-formulario{
@@ -165,30 +215,30 @@ gap: 5px;
     padding-right: 0px;
     padding-left: 0px;
     }
-   
+
 }
-@media (min-width:650px){
+/* @media (min-width:650px){
     .formulario-busqueda{
        justify-content: center;
        height: 50%;
-       
+
     }
     /* .formulario-categorias{
     } */
-    .formulario-busqueda input, 
+    /* .formulario-busqueda input,
     .formulario-busqueda button{
-       height: 50%;
+       height: 50%; */
 
-    }
-}
+    /* }
+}  */
 
-@media(min-width:0px) and (max-width:649px){
+/* @media(min-width:0px) and (max-width:649px){ */
     /* .seccion-cuerpo{
         display: flex;
         justify-content: center;
     } */
- 
-    .contenedor-categ-busqueda{
+
+    /* .contenedor-categ-busqueda{
         width: 100%;
     }
 .formulario-busqueda{
@@ -196,12 +246,12 @@ gap: 5px;
     justify-content: end;
     width: 50%;
 }
-.formulario-busqueda input, 
+.formulario-busqueda input,
 .formulario-busqueda button{
    height: 10%;
 
 }
-}
+} */
 
 @media (min-width: 1440px){
     #titulo-panel{
@@ -218,22 +268,22 @@ font-size: 80px;
 
 
 @media (min-width: 500px) and (max-width: 850px){
- 
+
     #contenedor-carrusel{
         width: 100%;
         flex-direction: column;
         align-items: center;
         justify-items: center;
        margin-right: 150px;
-       
+
 }
 #carrusel{
     width: 50%;
 }
-.cuerpo-home{
+/* .cuerpo-home{
     width: 380px;
     justify-content:space-between;
-}
+} */
 
 }
 @media  (min-width:850px){
@@ -248,14 +298,14 @@ font-size: 80px;
 }
 
 @media(max-width:400px){
-    footer{
+footer{
         padding-top: 15px;
         flex-direction: column;
         align-items: start;
         gap: 10px;
         padding-bottom: 10px;
             }
-            #carrusel{
-                align-self: center;
+#carrusel{
+align-self: center;
             }
 }
