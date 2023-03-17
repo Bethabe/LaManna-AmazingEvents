@@ -4,17 +4,37 @@ const params = new URLSearchParams(queryString);
 console.log(params);
 const id = params.get("id");
 console.log(id);
+dataEventosApi = obtenerDatos();
 
-const contenedor = document.getElementById("contenedor-cardDetail");
+async function obtenerDatos(){
+    try{
+        const url = "https://mindhub-xj03.onrender.com/api/amazing"
+        const objeto  = await fetch(url);
+        console.log(objeto);
+        const objetoData = await objeto.json();
+        console.log(objetoData);
+        const dataEventos = objetoData.events;
+        console.log(dataEventos);
+        return dataEventos;
+    }
+    catch(error){
+        throw(error);
+    } 
+}
 
-for(let elemento of data.events){
+mostrarDetalle(dataEventosApi);
+async function mostrarDetalle(data){
+    let dataCard =  await data;
+    const contenedor = document.getElementById("contenedor-cardDetail");
+
+for(let elemento of dataCard){
     if (elemento._id == id){
 
         const div = document.createElement("div")
         div.classList.add("card")
         div.innerHTML= `<div class=" d-flex justify-content-end flex-row w-100 h-100">
                             <div class="d-flex align-items-center w-75">
-                                <img src="${elemento.image}" class="img-fluid px-3" alt="${elemento.name}">
+                                <img src="${elemento.image}" class="img-fluid object-fit-cover w-100 px-3" alt="${elemento.name}">
                             </div>
                             <div class="d-flex flex-column align-content-start mx-3">
                                 <div class="card-body w-100 h-100">
@@ -60,13 +80,13 @@ for(let elemento of data.events){
         contenedor.appendChild(div); 
     }     
 }
+const btnVolver = document.getElementById('regreso');
+console.log(btnVolver);
+btnVolver.addEventListener('click', (e)=>{
+   window.history.back();
+}
+)
+}
 
-
-
- const btnVolver = document.getElementById('regreso');
- console.log(btnVolver);
- btnVolver.addEventListener('click', (e)=>{
-    window.history.back();
- })
 
 
