@@ -92,7 +92,6 @@ function mostrarTarjetas(arregloApi, idContenedor){
 
 }
 
-
  function filtroSelector(arregloSelectoresApi, arregloDatos){
         let arregloSelectores =  arregloSelectoresApi
         console.log(arregloSelectoresApi)
@@ -102,16 +101,17 @@ function mostrarTarjetas(arregloApi, idContenedor){
         if (arregloSelectores.length == 0) return data
         let nuevoArreglo = data.filter(elemento => arregloSelectores.includes(elemento.category.replace(" ", "")))
         return nuevoArreglo;
-    }
+};
 
 
-    const input = document.getElementById("buscador");
-    input.addEventListener("keyup", (e) =>{
-            arregloTexto = input.value;
-            console.log(arregloTexto);
-            filtrosCruzados(dataEventos);
-            }
-    );
+const input = document.getElementById("buscador");
+input.addEventListener("keyup", (e) =>{
+        arregloTexto = input.value;
+        console.log(arregloTexto);
+        filtrosCruzados(dataEventos);
+        }
+);
+
  function filtroTexto(texto, arregloApi){
     let arrayObject = arregloApi
      if(texto == "") return arrayObject;
