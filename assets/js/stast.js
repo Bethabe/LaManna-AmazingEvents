@@ -33,12 +33,6 @@ async function obtenerDatos(){
         let resultado = [];
         resultado.push(nombreEventoMaximo, maximo)
         return resultado;
-        console.log(indiceMaximo)
-        console.log(valores)
-        console.log(sum)
-        console.log(porcentajes)
-        console.log(maximo);
-        console.log(nombreEventoMaximo)
 }
 
  function traerMenorAsistencia(arrayDataApi){
@@ -67,7 +61,6 @@ resultado.push(eventoMayorCapacidad, mayorCapacidad)
 return resultado;
 
 }
-// traerEventoMayorCapacidad(dataEventosApi);
 
 async function pintarTablaUno(arrayDataApi, idTbody){
         let tBody = document.getElementById(idTbody)
@@ -98,7 +91,6 @@ async function listarGrupoCategorias(arregloCategorias, arrayDataApi, string){
                 let arreglo = await arrayDataApi;
                 let categorias = await arregloCategorias;
                 let nuevoArregloFinal = []
-                console.log(categorias)
                 for (let x = 0; x < categorias.length; x++) {
                 let suma = 0;
                 let attendance = 0;
