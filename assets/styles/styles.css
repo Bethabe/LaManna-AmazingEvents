@@ -41,6 +41,11 @@ justify-content: center;
 #carrusel{
     width:700px;
 }
+/* #titulo-panel{
+    background-image: url("../img/My\ project-1.png");
+    background-size:cover;
+    height: 100%;
+} */
 #tarjetas-inicio img{
     width: 260px;
     height: 128.05px;
@@ -56,8 +61,11 @@ justify-content: center;
     scale: 105%;
    transition: 0.3S;
 }
+#btn-tarjetas:hover{
+    color: #682686;
+}
 #contenedor-carrusel{
-    background-image: url(./assets/img/My\ project-1.png);
+    background-image: url("../img/My\ project-1.png");
     background-size: contain;
     background-repeat: repeat;
     /* background: rgb(221, 100, 20 );
@@ -97,8 +105,9 @@ cursor: pointer;
   .navbar-nav a:hover::before {
     transform: scaleX(1);
   }
-#tabla-estadistica th{
-color: coral;
+#contenedor-tabla-estadisticas
+ h2{
+background-color: rgb(230, 93, 150);
 }
 #tabla-estadistica tbody tr td:hover{
 background-color: rgba(177, 34, 77, 0.842);
@@ -106,29 +115,46 @@ background-color: rgba(177, 34, 77, 0.842);
 
 @media (min-width: 1200px){
     #titulo-panel{
-        width: 50%;
+        width: 100%;
     }
+.form-busqueda input, 
+ .form-busqueda button{
+    height: 100%;
+ }
 }
 
   @media (min-width: 0px) and (max-width: 1199.98px) { 
-    #contenedor-carrusel{
-        flex-direction: column;
-        align-items: center;
-    }
-    .carousel {
-        width: 75%;
-        height: 50%;
-        padding-bottom: 10px;;
-    }
-    #titulo-panel{
-        width: 100%;
-        height: 25%;
-    }
+  
+.formulario-categorias{
+width: 30%;
+}
+/* #contenedor-carrusel{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+#carrusel {
+    width: 75%;
+    height: 50%;
+    padding-bottom: 10px;
+}
+#titulo-panel{
+    width: 100%;
+    height: 100%;
+    align-self: center;
+} */
+#enlaces-navegacion{
+    font-size: 150px;
+}
+
    }
+   
    @media (min-width: 0px) and (max-width: 600px){
     .contenedor-pie-iconos{
 gap: 5px;
+
     }
+    
    }
 @media (min-width:0px) and (max-width: 768px){
     .contenedor-formulario{
@@ -139,4 +165,97 @@ gap: 5px;
     padding-right: 0px;
     padding-left: 0px;
     }
+   
+}
+@media (min-width:650px){
+    .formulario-busqueda{
+       justify-content: center;
+       height: 50%;
+       
+    }
+    /* .formulario-categorias{
+    } */
+    .formulario-busqueda input, 
+    .formulario-busqueda button{
+       height: 50%;
+
+    }
+}
+
+@media(min-width:0px) and (max-width:649px){
+    /* .seccion-cuerpo{
+        display: flex;
+        justify-content: center;
+    } */
+ 
+    .contenedor-categ-busqueda{
+        width: 100%;
+    }
+.formulario-busqueda{
+    height: 15%;
+    justify-content: end;
+    width: 50%;
+}
+.formulario-busqueda input, 
+.formulario-busqueda button{
+   height: 10%;
+
+}
+}
+
+@media (min-width: 1440px){
+    #titulo-panel{
+        justify-content: center;
+        align-items: center;
+    }
+#titulo-panel h2{
+font-size: 80px;
+    }
+#carrusel{
+        width: 60%;
+    }
+}
+
+
+@media (min-width: 500px) and (max-width: 850px){
+ 
+    #contenedor-carrusel{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+       margin-right: 150px;
+       
+}
+#carrusel{
+    width: 50%;
+}
+.cuerpo-home{
+    width: 380px;
+    justify-content:space-between;
+}
+
+}
+@media  (min-width:850px){
+    #titulo-panel{
+        justify-content: center;
+        align-content: center;
+    }
+    #titulo-panel h2{
+        font-size: 60px;
+        align-self: center;
+    }
+}
+
+@media(max-width:400px){
+    footer{
+        padding-top: 15px;
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+        padding-bottom: 10px;
+            }
+            #carrusel{
+                align-self: center;
+            }
 }

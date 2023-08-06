@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <link rel="icon" type="image/jpg" href="./assets/img/LogoAmazingEvents.png"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Amazing Events</title>
 </head>
@@ -34,9 +35,6 @@
             <a class="nav-link" href="./past-events.html">Past Events</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./datails.html">Detail</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="./contact.html">Contact</a>
           </li>
           <li class="nav-item">
@@ -49,11 +47,65 @@
   </nav>
 </header>
 <main>
-    <section class="d-flex justify-content-end" id="contenedor-carrusel">
-      <div class="d-flex justify-content-center my-auto" id="titulo-panel">
-        <h2 style="font-size:80px; font-family: Arial, Helvetica, sans-serif;text-align: center; color: aliceblue;">HI, WELCOME TO AMAZIN EVENTS!</h2>
+  <section class="d-flex justify-content-end" id="contenedor-carrusel">
+    <div class="d-flex justify-content-center" id="titulo-panel">
+      <h2 style=" font-family: Arial, Helvetica, sans-serif;text-align: center; color: aliceblue;">HI, WELCOME TO AMAZIN EVENTS!</h2>
+    </div>
+      <div id="carrusel" class="carousel slide" data-bs-ride="carousel" >
+          <div class="carousel-inner d-flex">
+            <!-- <div class="carousel-item active">
+              <img src="./assets/img/Costume_Party.jpg" class="d-block w-100" height="400" alt="...">
+            </div>
+            <div class="carousel-item align-self-center position-static">
+              <img src="./assets/img/Cinema.jpg" class="d-block w-100" alt="...">
+            </div> -->
+            <!-- <div class="carousel-item active">
+              <img src="./assets/img/Food_Fair.jpg" class="d-block w-100" alt="...">
+            </div> -->
+            <div class="carousel-item active">
+              <img src="./assets/img/zyro-image.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/img/Museum_Tour.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+  </section>
+  <section class="contenedor-categ-busqueda d-flex flex-column justify-content-center w-100 px-5">
+      <div class="cuerpo-home d-flex justify-content-between mt-5 align-content-center w-100">
+        <form action="" class="formulario-categorias w-50">
+            <fieldset class="d-flex justify-content-start flex-row gap-5 flex-wrap" id="">
+                <label><input class="me-1"  type="checkbox" name="categoria" id="categoria-uno">Category</label>
+                <label><input class="me-1" type="checkbox" name="categoria" id="categoria-dos">Category</label>
+                <label><input class="me-1" type="checkbox" name="categoria" id="categoria-tres">Category</label>
+                <label><input class="me-1" type="checkbox" name="categoria" id="categoria-cuatro">Category</label>
+                <label><input class="me-1" type="checkbox" name="categoria" id="categoria-cinco">Category</label>
+            </fieldset>
+        </form>
+        <form class="formulario-busqueda d-flex justify-content-end">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+     </div>
+    </div>
+       <div class=" d-flex flex-row justify-content-between gap-3 flex-wrap mt-5 mb-5" id="tarjetas-inicio">
+      </div>     
+  </section>
+</main>
+<!-- <main>
+    <section class="d-flex justify-content-end" id="contenedor-carrusel" height="200">
+      <div class="d-flex justify-content-center h-100" id="titulo-panel">
+        <h2 style="font-size:80px; font-family: Arial, Helvetica, sans-serif;text-align: center; color: rgb(232, 237, 241);">HI, WELCOME TO AMAZIN EVENTS!</h2>
       </div>
-        <div id="carrusel" class="carousel slide" data-bs-ride="carousel" >
+        <div id="carrusel" class="carousel slide h-100" data-bs-ride="carousel" >
             <div class="carousel-inner d-flex">
               <div class="carousel-item active">
                 <img src="./assets/img/zyro-image.png" class="d-block w-100" alt="...">
@@ -89,94 +141,9 @@
             </form>
          </div>     
          <div class=" d-flex flex-row justify-content-center gap-5 flex-wrap mt-5" id="tarjetas-inicio">
-          
-            <div class="card">
-                <div class="d-flex justify-content-center mt-3">
-                    <img src="./assets/img/Costume_Party.jpg" class="card-img-top" alt="...">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-                <div class="d-flex justify-content-between mx-2 flex-wrap">
-                    <p class="align-self-center">Price: <strong>$999</strong></p>
-                    <p class="border border-2 p-1" style="box-shadow: -8px -8px 10px 0 rgba(128, 128, 128, 0.548) ; ">See more...</p>
-                </div>
-            </div>
-            
-            <div class="card">
-              <div class="d-flex justify-content-center mt-3">
-                  <img src="./assets/img/Costume_Party.jpg" class="card-img-top" alt="...">
-              </div>
-              <div class="card-body">
-                  <h5 class="card-title">Title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-              <div class="d-flex justify-content-between mx-2 flex-wrap">
-                  <p class="align-self-center">Price: <strong>$999</strong></p>
-                  <p class="border border-2 p-1" style="box-shadow: -8px -8px 10px 0 rgba(128, 128, 128, 0.548) ; ">See more...</p>
-              </div>
-          </div>
-          
-          <div class="card">
-            <div class="d-flex justify-content-center mt-3">
-                <img src="./assets/img/Cinema.jpg" class="card-img-top" alt="...">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <div class="d-flex justify-content-between mx-2 flex-wrap">
-                <p class="align-self-center">Price: <strong>$999</strong></p>
-                <p class="border border-2 p-1" style="box-shadow: -8px -8px 10px 0 rgba(128, 128, 128, 0.548) ; ">See more...</p>
-            </div>
-        </div>
-        
-        <div class="card">
-          <div class="d-flex justify-content-center mt-3">
-              <img src="./assets/img/Food_Fair.jpg" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body">
-              <h5 class="card-title">Title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-          <div class="d-flex justify-content-between mx-2 flex-wrap">
-              <p class="align-self-center">Price: <strong>$999</strong></p>
-              <p class="border border-2 p-1" style="box-shadow: -8px -8px 10px 0 rgba(128, 128, 128, 0.548) ; ">See more...</p>
-          </div>
-      </div>
-      
-      <div class="card">
-        <div class="d-flex justify-content-center mt-3">
-            <img src="./assets/img/Marathon.jpg" class="card-img-top" alt="...">
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-        <div class="d-flex justify-content-between mx-2 flex-wrap">
-            <p class="align-self-center">Price: <strong>$999</strong></p>
-            <p class="border border-2 p-1" style="box-shadow: -8px -8px 10px 0 rgba(128, 128, 128, 0.548) ; ">See more...</p>
-        </div>
-    </div>
-    
-    <div class="card">
-      <div class="d-flex justify-content-center mt-3">
-          <img src="./assets/img/Museum_Tour.jpg" class="card-img-top" alt="...">
-      </div>
-      <div class="card-body">
-          <h5 class="card-title">Title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
-      <div class="d-flex justify-content-between mx-2 flex-wrap">
-          <p class="align-self-center">Price: <strong>$999</strong></p>
-          <p class="border border-2 p-1" style="box-shadow: -8px -8px 10px 0 rgba(128, 128, 128, 0.548) ; ">See more...</p>
-      </div>
-  </div>
-                
           </div>     
     </section>
-  </main>
+  </main> -->
 <footer class="d-flex w-100 justify-content-between px-5 align-items-center">
 <div class="contenedor-pie-iconos d-flex gap-5">
   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-instagram icono" viewBox="0 0 16 16">
@@ -192,5 +159,7 @@
 <h4 id="texto-pie">Cohort</h4>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="./assets/js/data.js"></script>
+<script src="./assets/js/index.js"></script>
 </body>
 </html>

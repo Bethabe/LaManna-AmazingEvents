@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <link rel="icon" type="image/jpg" href="./assets/img/LogoAmazingEvents.png"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Amazing Events</title>
 </head>
@@ -30,9 +31,6 @@
             <a class="nav-link" href="./past-events.html">Past Events</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./datails.html">Detail</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="./contact.html">Contact</a>
           </li>
           <li class="nav-item">
@@ -45,6 +43,157 @@
   </nav>
 </header>
 <main>
+  <section class="d-flex justify-content-end" id="contenedor-carrusel">
+    <div class="d-flex justify-content-center" id="titulo-panel">
+      <h2 style=" font-family: Arial, Helvetica, sans-serif;text-align: center; color: aliceblue;">HI, WELCOME TO AMAZIN EVENTS!</h2>
+    </div>
+      <div id="carrusel" class="carousel slide" data-bs-ride="carousel" >
+          <div class="carousel-inner d-flex">
+            <!-- <div class="carousel-item active">
+              <img src="./assets/img/Costume_Party.jpg" class="d-block w-100" height="400" alt="...">
+            </div>
+            <div class="carousel-item align-self-center position-static">
+              <img src="./assets/img/Cinema.jpg" class="d-block w-100" alt="...">
+            </div> -->
+            <!-- <div class="carousel-item active">
+              <img src="./assets/img/Food_Fair.jpg" class="d-block w-100" alt="...">
+            </div> -->
+            <div class="carousel-item active">
+              <img src="./assets/img/zyro-image.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/img/Museum_Tour.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+  </section>
+  <section class="contenedor-categ-busqueda d-flex flex-column justify-content-center w-100 px-5">
+      <div class="cuerpo-home d-flex justify-content-between mt-5 align-content-center w-100">
+        <form action="" class="formulario-categorias w-50">
+            <fieldset class="d-flex justify-content-start flex-row gap-5 flex-wrap" id="">
+                <label><input class="me-1"  type="checkbox" name="categoria" id="categoria-uno">Category</label>
+                <label><input class="me-1" type="checkbox" name="categoria" id="categoria-dos">Category</label>
+                <label><input class="me-1" type="checkbox" name="categoria" id="categoria-tres">Category</label>
+                <label><input class="me-1" type="checkbox" name="categoria" id="categoria-cuatro">Category</label>
+                <label><input class="me-1" type="checkbox" name="categoria" id="categoria-cinco">Category</label>
+            </fieldset>
+        </form>
+        <form class="formulario-busqueda d-flex justify-content-end">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+     </div>
+    </div>
+       <div class=" d-flex flex-row justify-content-between gap-3 flex-wrap mt-5 mb-5" id="tarjetas-inicio">
+      </div>     
+  </section>
+</main>
+<section class="d-flex flex-column py-3 align-items-center text-center" id="contenedor-tabla-estadisticas">
+  <h2 class="text-start w-75 fs-5 border-2 border-dark mb-0 py-1">Events Statistics</h2>
+  <table class="table table-dark table-hover w-75 mb-0" id="tabla-estadistica-eventos">
+      <thead>
+        <tr class="col-12">
+          <th class="col-4">Events with the highest percentage of attendance</th>
+          <th class="col-4">Events with the lowest percentage of attendance</th>
+          <th class="col-4 text-center pb-4">Event with larger capacity</th>
+        </tr>
+      </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 class="text-start w-75 fs-5 border-2 border-dark mb-0 py-1">Upcoming events statistics by category</h2>
+      <table class="table table-dark table-hover w-75 mb-0" id="tabla-estadistica-siguientes">
+        <thead>
+          <tr class="col-12">
+            <th class="col-4">Categories</th>
+            <th class="col-4">Revenues</th>
+            <th class="col-4">Percentage of attendance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+        </tbody>
+      </table>
+      <h2 class="text-start w-75 fs-5 border-2 border-danger  mb-0 py-1">Past events estatistics by category</h2>
+       <table class="table table-dark table-hover w-75" id="tabla-estadistica-pasados">
+        <tr class="col-12">
+          <th class="col-4">Categories</th>
+          <th class="col-4">Percentges</th>
+          <th class="col-4">Percentage of attendance</th>
+        </tr>
+      </thead>
+    <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody> 
+       </table>  
+</section>
+<!-- <main>
     <section class="d-flex justify-content-end" id="contenedor-carrusel">
       <div class="d-flex justify-content-center my-auto" id="titulo-panel">
         <h2 style="font-size:50px; font-family: Arial, Helvetica, sans-serif;text-align: center; color: aliceblue;">HI, WELCOME TO AMAZIN EVENTS!</h2>
@@ -68,99 +217,8 @@
             </button>
           </div>
     </section>
-    <section class="d-flex py-3 justify-content-center">
-        <table class="table table-dark table-hover w-75" id="tabla-estadistica">
-            <thead>
-                <tr>
-                  <th scope="col">Events Statics</th>
-                  <th></th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                  <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                  <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              <thead>
-                <tr>
-                  <th scope="col">Upcoming events statistics by category</th>
-                  <th></th>
-                  <th></th>
-                </tr>
-              </thead>
-                <tr>
-                  <td>Categories</td>
-                  <td>Revenues</td>
-                  <td>Percentage of attendance</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                <thead>
-                    <tr>
-                      <th scope="col">Past events estatistics by category</th>
-                      <th></th>
-                    <th></th>
-                    </tr>
-                  </thead>
-                    <tr>
-                      <td>Categories</td>
-                      <td>Percentges</td>
-                      <td>Percentage of attendance</td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-              </tbody>        
-        </table>
-    </section>
-  </main>
+   
+  </main> -->
 <footer class="d-flex w-100 justify-content-between px-5 align-items-center">
 <div class="contenedor-pie-iconos d-flex gap-5">
   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-instagram icono" viewBox="0 0 16 16">
